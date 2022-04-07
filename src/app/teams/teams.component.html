@@ -1,0 +1,14 @@
+<div class="row">
+    <ul class='teams column'>
+        <li *ngFor="let team of teams">
+            <button [class.selected]="team === selectedTeam" type="button" (click)="onSelect(team)">
+                <span class="badge"><img src={{team.logo}} height="30px" /></span>
+                <span class="name">{{team.name}}</span>
+            </button>
+        </li>
+    </ul>
+
+    <div class="selectedTeam column">
+        <app-team-detail [team]="selectedTeam"></app-team-detail>
+    </div>
+</div>

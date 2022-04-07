@@ -1,0 +1,20 @@
+<div *ngIf="team">
+    <div class="center">
+        <h1>{{team.name}}</h1>
+        <img src={{team.logo}}>
+    </div>
+    <div class="row">
+        <div class="column">
+            <label for="wins"><b>Wins:</b></label>
+            <input id="wins" [(ngModel)]="team.wins">
+        </div>
+        <div class="column">
+            <label for="losses"><b>Losses:</b></label>
+            <input id="losses" [(ngModel)]="team.losses">
+        </div>
+        <div class="column">
+            <label for="draws"><b>Draws:</b></label>
+            <input id="draws" [(ngModel)]="team.draws">
+        </div>
+    </div>
+</div>
